@@ -6,6 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { Buffer } from 'buffer';
+
 export async function pbkdf2_sha512(key: string | Buffer, salt: string | Buffer, iterations: number, keyLen: number): Promise<Buffer> {
     const keyBuffer = typeof key === 'string' ? Buffer.from(key, 'utf-8') : key;
     const saltBuffer = typeof salt === 'string' ? Buffer.from(salt, 'utf-8') : salt;

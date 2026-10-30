@@ -6,6 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { Buffer } from 'buffer';
 import jsSHA from 'jssha';
 
 export async function sha256(source: Buffer | string): Promise<Buffer> {
