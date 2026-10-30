@@ -6,6 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { Buffer } from 'buffer';
 import jsSHA from 'jssha';
 
 export async function hmac_sha512(key: string | Buffer, data: string | Buffer): Promise<Buffer> {

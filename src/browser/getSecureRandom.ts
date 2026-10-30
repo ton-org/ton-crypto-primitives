@@ -6,6 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { Buffer } from 'buffer';
+
 export function getSecureRandomBytes(size: number): Buffer {
     return Buffer.from(window.crypto.getRandomValues(new Uint8Array(size)));
 }

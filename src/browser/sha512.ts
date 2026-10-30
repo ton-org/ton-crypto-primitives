@@ -6,6 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { Buffer } from 'buffer';
+
 export async function sha512(source: Buffer | string): Promise<Buffer> {
     if (typeof source === 'string') {
         return Buffer.from(await crypto.subtle.digest("SHA-512", Buffer.from(source, 'utf-8')));
